@@ -287,7 +287,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="276" pagingEnabled="YES" editable="NO" text="Description" id="coe-cV-8tT">
-                                                <rect key="frame" x="6" y="96.999996816670389" width="281" height="189"/>
+                                                <rect key="frame" x="6" y="96.99999248689663" width="281" height="189"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" red="0.2901960784" green="0.81176470590000005" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -879,7 +879,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="276" pagingEnabled="YES" editable="NO" text="Description" id="JPU-bQ-Wyu">
-                                                <rect key="frame" x="6" y="94.999995081964073" width="281" height="137"/>
+                                                <rect key="frame" x="6" y="95.000002682778558" width="281" height="137"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" red="0.2901960784" green="0.81176470590000005" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

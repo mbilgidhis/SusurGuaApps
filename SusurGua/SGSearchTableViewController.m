@@ -153,17 +153,7 @@
         searchSegue = [self.listSearchGua objectAtIndex:indexPath.row];
     }
     
-    
-    // Fetch Detail Gua
-    //NSDictionary *detail = [self.listGuaProvinsi objectAtIndex:[indexPath row]];
-    /*
-     self.biotaTitle =  [biota objectForKey:@"name"];
-     self.biotaDesc = [biota objectForKey:@"description"];
-     
-     NSString *urlImg = [biota objectForKey:@"image"];
-     self.biotaImg = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:urlImg]]];
-     */
-    
+
     self.guaID = [searchSegue objectForKey:@"id"];
     
     // Perform Segue
