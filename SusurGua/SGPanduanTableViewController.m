@@ -83,7 +83,7 @@
     //return cell;
     NSString *CellIdentifier = [self.menuPanduans objectAtIndex:indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
- 
+    [tableView setSeparatorInset:UIEdgeInsetsMake(0.1, 10, 01, 10)];
     return cell;
 }
 

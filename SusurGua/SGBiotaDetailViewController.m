@@ -40,6 +40,7 @@
     }
     self.automaticallyAdjustsScrollViewInsets = NO;
     NSString *description = self.biotaViewDesc;
+    [self.biotaDescription setTextContainerInset:UIEdgeInsetsMake(10, 12, 10, 12)];
     self.biotaDescription.text = [[NSString alloc] initWithString:(@"%@",description)];
 }
 

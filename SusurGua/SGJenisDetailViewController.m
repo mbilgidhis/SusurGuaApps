@@ -43,6 +43,7 @@
     }
     
     self.automaticallyAdjustsScrollViewInsets = NO;
+    [self.jenisDescription setTextContainerInset:UIEdgeInsetsMake(10, 12, 10, 12)];
     self.jenisDescription.text = [[NSString alloc] initWithString:(@"%@",description)];
 }
 

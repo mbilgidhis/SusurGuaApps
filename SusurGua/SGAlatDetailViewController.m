@@ -43,6 +43,7 @@
         [self.alatImage setImage:self.alatViewImage];
     }
     self.automaticallyAdjustsScrollViewInsets = NO;
+    [self.alatDescription setTextContainerInset:UIEdgeInsetsMake(10, 12, 10, 12)];
     self.alatDescription.text = [[NSString alloc] initWithString:(@"%@",description)];
 }
 

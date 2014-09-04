@@ -10,6 +10,7 @@
 #import "SWRevealViewController.h"
 
 
+
 @interface SGGuaDetailViewController ()
 
 @end
@@ -28,6 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
     _sidebarButton.target = self.revealViewController;
     _sidebarButton.action = @selector(revealToggle:);
@@ -101,6 +103,7 @@
     }
 
     //Image
+    /*
     NSArray *imgArray = [[specificGua objectAtIndex:0] objectForKey:@"images"];
     if([imgArray count] != 0){
         NSString *imgURL = [[imgArray objectAtIndex:0] objectForKey:@"file"];
@@ -112,8 +115,24 @@
         
         self.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imgURL]]];
         [self.imageView setImage:self.image];
-        
     }
+    */
+    
+    NSArray *imgArray = [[specificGua objectAtIndex:0] objectForKey:@"images"];
+    if([imgArray count] != 0){
+        self.imgURL = [[imgArray objectAtIndex:0] objectForKey:@"file"];
+    }else{
+        NSString *key = @"AIzaSyC4u0qz49U32rHZg90iLOyxbFSn_fwL6Fg";
+        self.imgURL = [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/staticmap?center=%@,%@&zoom=14&size=600x300&markers=%@,%@&key=%@", lat, longi, lat, longi, key];
+    }
+    
+    NSOperationQueue *queue = [NSOperationQueue new];
+    NSInvocationOperation *operation = [[NSInvocationOperation alloc]
+                                        initWithTarget:self
+                                        selector:@selector(loadImage)
+                                        object:nil];
+    [queue addOperation:operation];
+    //[operation release];
     
     //Jenis Gua
     NSDictionary *jenisDict = [[specificGua objectAtIndex:0]objectForKey:@"type"];
@@ -124,10 +143,14 @@
     }
     
     //Description
+    
     self.description.text = [[NSString alloc] initWithString:(@"%@",[[specificGua objectAtIndex:0] objectForKey:@"description"])];
-    CGRect frame = self.description.frame;
-    frame.size.height = self.description.contentSize.height;
-    self.description.frame = frame;
+    [self.description sizeToFit];
+    
+    //CGRect frame = self.description.frame;
+    //frame.size.height = self.description.contentSize.height;
+    //self.description.frame = frame;
+    
     
     //Contact
     NSArray *contact = [[specificGua objectAtIndex:0]objectForKey:@"contacts"];
@@ -138,7 +161,7 @@
         self.email.text = @"";
         self.phone.text = @"";
     }
-
+    /*
     //Gears
     NSArray *gearsAll = [[specificGua objectAtIndex:0]objectForKey:@"gears"];
     //NSLog(@"%@, %i",gearsAll, [gearsAll count]);
@@ -155,6 +178,12 @@
     }else{
         self.gears.text = @"";
     }
+    */
+    CGRect contentRect = CGRectZero;
+    for (UIView *view in self.content.subviews) {
+        contentRect = CGRectUnion(contentRect, view.frame);
+    }
+    self.content.contentSize = contentRect.size;
     
 }
 
@@ -162,6 +191,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)loadImage {
+    NSData* imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:self.imgURL]];
+    UIImage* image = [[UIImage alloc] initWithData:imageData];
+    [self performSelectorOnMainThread:@selector(displayImage:) withObject:image waitUntilDone:NO];
+}
+
+- (void)displayImage:(UIImage *)image {
+    [self.imageView setImage:image]; //UIImageView
 }
 
 /*

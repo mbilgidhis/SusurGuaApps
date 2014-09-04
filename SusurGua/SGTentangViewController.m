@@ -57,6 +57,7 @@
     
     NSString *about = [data objectForKey:@"name"];
     self.automaticallyAdjustsScrollViewInsets = NO;
+    [self.tentang setTextContainerInset:UIEdgeInsetsMake(10, 12, 10, 12)];
     self.tentang.text = [[NSString alloc] initWithString:(@"%@",about)];
     
 }

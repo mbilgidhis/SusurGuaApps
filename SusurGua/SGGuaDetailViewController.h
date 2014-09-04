@@ -17,9 +17,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *latitude;
 @property (weak, nonatomic) IBOutlet UILabel *phone;
 @property (weak, nonatomic) IBOutlet UILabel *email;
-@property (weak, nonatomic) IBOutlet UITextView *gears;
+//@property (weak, nonatomic) IBOutlet UITextView *gears;
+@property (weak, nonatomic) IBOutlet UIScrollView *content;
 
-@property (weak, nonatomic) UIImage *image;
+
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @property (weak, nonatomic) UIImage *pin;
@@ -33,5 +34,6 @@
 
 //get from area list
 @property NSString *guaViewID;
+@property NSString *imgURL;
 
 @end

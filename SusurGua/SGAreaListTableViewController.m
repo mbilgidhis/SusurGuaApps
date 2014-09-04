@@ -154,6 +154,7 @@
     }
     cell.textLabel.textColor = [UIColor whiteColor];
     [cell setBackgroundColor:[UIColor colorWithRed:74/255.0 green:207/255.0 blue:221/255.0 alpha:0.5]];
+    [tableView setSeparatorInset:UIEdgeInsetsMake(0.1, 10, 01, 10)];
     return cell;
 }
 
