@@ -14,6 +14,7 @@
 #import "SGGuaDetailViewController.h"
 
 
+#define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
 
 @interface SGMainViewController ()
 
@@ -71,7 +72,18 @@
     self.marker = [data copy];
     //NSLog(@"data %@",self.marker);
     
-    //For Map Kit
+    
+    
+    //_locationManager.delegate = self;
+    self.locationManager = [[CLLocationManager alloc] init];
+    if(IS_OS_8_OR_LATER) {
+        [self.locationManager requestWhenInUseAuthorization];
+        [self.locationManager requestAlwaysAuthorization];
+    }
+    
+    [self.locationManager startUpdatingLocation];
+    
+    //For Map Kit;
     _mapView.showsUserLocation = YES;
     self.mapView.delegate = self;
     
@@ -90,6 +102,7 @@
         
     }
     
+    
 }
 
 
@@ -98,6 +111,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
@@ -148,7 +162,7 @@
     
     // Perform Segue
     //[self performSegueWithIdentifier:@"map_detail" sender:self];
-    if ((int)[[UIScreen mainScreen] bounds].size.height == 568)
+    if ((int)[[UIScreen mainScreen] bounds].size.height >= 568)
     {
         // This is iPhone 5 screen
         // Perform Segue

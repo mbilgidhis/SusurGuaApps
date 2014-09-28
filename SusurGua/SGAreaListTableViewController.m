@@ -47,6 +47,8 @@
     // Set the gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
+    self.tableView.rowHeight = 44;
+    
     //Get Per Area Gua from api
     
     //post message
@@ -166,7 +168,7 @@
     
     self.guaID = [detail objectForKey:@"id"];
     
-    if ((int)[[UIScreen mainScreen] bounds].size.height == 568)
+    if ((int)[[UIScreen mainScreen] bounds].size.height >= 568)
     {
         // This is iPhone 5 screen
         // Perform Segue

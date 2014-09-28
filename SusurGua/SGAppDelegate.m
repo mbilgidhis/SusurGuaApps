@@ -7,7 +7,7 @@
 //
 
 #import "SGAppDelegate.h"
-#import <GoogleMaps/GoogleMaps.h>
+//#import <GoogleMaps/GoogleMaps.h>
 
 @implementation SGAppDelegate
 

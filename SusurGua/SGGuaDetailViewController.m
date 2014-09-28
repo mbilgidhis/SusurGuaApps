@@ -16,6 +16,7 @@
 @end
 
 @implementation SGGuaDetailViewController
+@synthesize description = _description;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

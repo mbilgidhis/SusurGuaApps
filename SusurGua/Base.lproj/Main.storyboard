@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="5Dh-D5-FC0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="5Dh-D5-FC0">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Reveal View Controller-->
@@ -287,7 +287,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="276" pagingEnabled="YES" editable="NO" text="Description" id="coe-cV-8tT">
-                                        <rect key="frame" x="11" y="90" width="281" height="132.99999335736663"/>
+                                        <rect key="frame" x="11" y="89.999994384030856" width="281" height="133"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="0.2901960784" green="0.81176470590000005" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -472,7 +472,6 @@
                     <navigationItem key="navigationItem" id="B7a-ey-0fU">
                         <barButtonItem key="rightBarButtonItem" image="menu.png" id="Kib-rg-hjg"/>
                     </navigationItem>
-                    <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="sidebarButton" destination="Kib-rg-hjg" id="h0p-hj-kyv"/>
                         <outlet property="tentang" destination="Xdk-qb-p60" id="Hci-vd-8mi"/>
@@ -507,7 +506,7 @@
             </objects>
             <point key="canvasLocation" x="1697" y="222"/>
         </scene>
-        <!--Jenis Detail View Controller - Title-->
+        <!--Title-->
         <scene sceneID="5hI-TL-YTs">
             <objects>
                 <viewController id="EJO-6t-gce" customClass="SGJenisDetailViewController" sceneMemberID="viewController">
@@ -533,7 +532,6 @@
                     <navigationItem key="navigationItem" title="Title" id="QB4-aK-pUd">
                         <barButtonItem key="rightBarButtonItem" image="menu.png" id="asl-e5-73l"/>
                     </navigationItem>
-                    <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="jenisDescription" destination="TqX-za-tT0" id="WMa-TA-h1Q"/>
                         <outlet property="jenisImg" destination="kq3-Pt-VNR" id="rCK-Xw-dJF"/>
@@ -630,7 +628,7 @@
             </objects>
             <point key="canvasLocation" x="738" y="-468"/>
         </scene>
-        <!--Search Table View Controller - Title-->
+        <!--Title-->
         <scene sceneID="D4k-kE-rGi">
             <objects>
                 <tableViewController id="xOc-T2-lhH" customClass="SGSearchTableViewController" sceneMemberID="viewController">
@@ -692,7 +690,7 @@
             </objects>
             <point key="canvasLocation" x="738" y="-1160"/>
         </scene>
-        <!--Alat Detail View Controller - Title-->
+        <!--Title-->
         <scene sceneID="g50-Sx-VMJ">
             <objects>
                 <viewController id="CJw-qi-ZmB" customClass="SGAlatDetailViewController" sceneMemberID="viewController">
@@ -718,7 +716,6 @@
                     <navigationItem key="navigationItem" title="Title" id="ZZ2-O5-FPx">
                         <barButtonItem key="rightBarButtonItem" image="menu.png" id="L1x-jn-poV"/>
                     </navigationItem>
-                    <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="alatDescription" destination="jzA-yJ-Rba" id="tjI-WS-Rhb"/>
                         <outlet property="alatImage" destination="B83-Cb-bD9" id="R5p-Hn-bSk"/>
@@ -729,7 +726,7 @@
             </objects>
             <point key="canvasLocation" x="2195" y="886"/>
         </scene>
-        <!--Biota Detail View Controller - Title-->
+        <!--Title-->
         <scene sceneID="cq0-js-SsR">
             <objects>
                 <viewController id="Trt-XR-23D" customClass="SGBiotaDetailViewController" sceneMemberID="viewController">
@@ -755,7 +752,6 @@
                     <navigationItem key="navigationItem" title="Title" id="6b0-wI-qQ4">
                         <barButtonItem key="rightBarButtonItem" image="menu.png" id="DTS-0S-4Fx"/>
                     </navigationItem>
-                    <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="biotaDescription" destination="2E0-pR-pYV" id="Ifj-Mq-eoi"/>
                         <outlet property="biotaImage" destination="xcE-c3-Afn" id="1JS-N3-JH8"/>
@@ -797,7 +793,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="GBP-GA-XXZ">
-                                <rect key="frame" x="9" y="271.0000006269193" width="303" height="289.9999993730807"/>
+                                <rect key="frame" x="9" y="271.00000043857585" width="303" height="289.99999956142415"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="55U-z2-2hl">
@@ -847,7 +843,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="276" pagingEnabled="YES" editable="NO" text="Description" id="JPU-bQ-Wyu">
-                                        <rect key="frame" x="11" y="98" width="281" height="185.99999958941203"/>
+                                        <rect key="frame" x="11" y="97.999999848660451" width="281" height="186"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="0.2901960784" green="0.81176470590000005" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -910,11 +906,11 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="mdB-V8-80C"/>
-        <segue reference="Dmw-6e-DMG"/>
-        <segue reference="gpb-08-KC9"/>
         <segue reference="f9T-ga-n1P"/>
         <segue reference="NPd-1C-BXH"/>
+        <segue reference="Kjx-Vq-SjV"/>
+        <segue reference="tk8-pm-m08"/>
         <segue reference="B1a-AH-6Cb"/>
+        <segue reference="p8d-KC-D1h"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -169,7 +169,8 @@
     
     // Perform Segue
     //[self performSegueWithIdentifier:@"segue_searchDetail" sender:self];
-    if ((int)[[UIScreen mainScreen] bounds].size.height == 568)
+    
+    if ((int)[[UIScreen mainScreen] bounds].size.height >= 568)
     {
         // This is iPhone 5 screen
         // Perform Segue

@@ -11,10 +11,11 @@
 #import "SGMarkerMap.h"
 
 
-@interface SGMainViewController : UIViewController <MKMapViewDelegate>
+@interface SGMainViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
+@property CLLocationManager *locationManager;
 @property NSArray *marker;
 
 @property SGMarkerMap *annot;
